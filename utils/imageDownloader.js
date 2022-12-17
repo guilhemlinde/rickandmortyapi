@@ -7,7 +7,7 @@ function downloadImage(url, filepath) {
   });
 }
 
-for (let i = 339; i < 340; i++) {
+for (let i = 824; i < 830; i++) {
   setTimeout(() => {
     downloadImage(
       `https://rickandmortyapi.com/api/character/avatar/${i}.jpeg`,
