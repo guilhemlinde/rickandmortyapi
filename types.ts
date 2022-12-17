@@ -8,6 +8,7 @@ export interface Info {
   pages: number;
   next: string;
   prev: null;
+  
 }
 
 export interface Character {

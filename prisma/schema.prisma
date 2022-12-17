@@ -36,7 +36,36 @@ model User {
 }
 
 model Character {
-  id    Int    @unique
-  name  String @db.VarChar(255)
-  image String @db.VarChar(255)
+  id       Int      @unique @default(autoincrement())
+  name     String   @db.VarChar(255)
+  status   String   @db.VarChar(255)
+  species  String   @db.VarChar(255)
+  type     String   @db.VarChar(255)
+  gender   String   @db.VarChar(255)
+  origin   Json
+  location Json
+  image    String   @db.VarChar(255)
+  episode  Json
+  url      String   @db.VarChar(255)
+  created  DateTime @default(now())
+}
+
+model Location {
+  id        Int      @unique @default(autoincrement())
+  name      String   @db.VarChar(255)
+  type      String   @db.VarChar(255)
+  dimension String   @db.VarChar(255)
+  residents Json
+  url       String   @db.VarChar(255)
+  created   DateTime @default(now())
+}
+
+model Episode {
+  id         Int      @unique @default(autoincrement())
+  name       String   @db.VarChar(255)
+  air_date    String   @db.VarChar(255)
+  episode    String   @db.VarChar(255)
+  characters Json
+  url        String   @db.VarChar(255)
+  created    DateTime @default(now())
 }
