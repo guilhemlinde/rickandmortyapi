@@ -1,17 +1,29 @@
 const download = require("image-downloader");
 
 function downloadImage(url, filepath) {
+  console.log(url, filepath);
   return download.image({
     url,
     dest: filepath,
   });
 }
 
-for (let i = 824; i < 830; i++) {
-  setTimeout(() => {
-    downloadImage(
-      `https://rickandmortyapi.com/api/character/avatar/${i}.jpeg`,
+const forLoop = async (_) => {
+  console.log("Start");
+
+  for (let index = 1; index <= 826; index++) {
+    const image = await downloadImage(
+      `https://rickandmortyapi.com/api/character/avatar/${index}.jpeg`,
       "../../public"
     );
-  }, 1000);
+    console.log(index, image);
+  }
+
+  console.log("End");
+};
+
+try {
+  forLoop();
+} catch (e) {
+  console.log(e);
 }

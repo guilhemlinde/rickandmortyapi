@@ -27,7 +27,7 @@ const Home: NextPage = ({ characters }: any) => {
               <Image
                 loader={imageLoader}
                 unoptimized
-                src={`/${character.id}.jpeg`}
+                src={`/jpeg-characters/${character.id}.jpeg`}
                 alt={character.name}
                 width="200"
                 height="200"

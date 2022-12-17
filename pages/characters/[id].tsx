@@ -12,7 +12,7 @@ const CharacterPage = ({ character }: { character: Character }) => {
       <Image
         loader={imageLoader}
         unoptimized
-        src={character.image}
+        src={`/jpeg-characters/${character.id}.jpeg`}
         alt={character.name}
         width="200"
         height="200"
