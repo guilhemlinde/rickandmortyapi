@@ -1,7 +1,6 @@
 import Image from "next/image";
-import React from "react";
 import imageLoader from "../../utils/imageLoader";
-import { Character, GetCharacterResults } from "../../types";
+import { Character } from "../../types";
 
 type Props = {};
 

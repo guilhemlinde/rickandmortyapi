@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../../styles/Home.module.css";
 import { GetStaticProps, NextPage } from "next";
-import { Character, GetCharacterResults } from "../../types";
+import { Character } from "../../types";
 import imageLoader from "../../utils/imageLoader";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ const Home: NextPage = ({ characters }: any) => {
                 <Image
                   loader={imageLoader}
                   unoptimized
-                  src={`/jpeg-characters/${character.id}.jpeg`}
+                  src={character.image}
                   alt={character.name}
                   width="200"
                   height="200"
