@@ -21,7 +21,7 @@ const Home: NextPage = ({ characters }: any) => {
       <div className={styles.container}>
         {characters.map((character: Character) => {
           return (
-            <div key={character.id}>
+            <div key={character.id} className={styles.card}>
               <Link href={`/characters/${character.id}`}>
                 <h3>{character.name}</h3>
 
