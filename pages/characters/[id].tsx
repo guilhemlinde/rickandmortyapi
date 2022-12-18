@@ -9,6 +9,7 @@ const CharacterPage = ({ character }: { character: Character }) => {
   return (
     <div>
       <h1>{character.name}</h1>
+      <h1>{character.location.name}</h1>
       <Image
         loader={imageLoader}
         unoptimized
